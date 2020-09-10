@@ -42,14 +42,14 @@ public class PlayerController : MonoBehaviour
             extraJumps = extraJumpsValue;
         }
         if(Input.GetKeyDown(KeyCode.UpArrow) && extraJumps>0)
-        //if(Input.touchCount>0 && extraJumps >0)  touchscreen
+        //if(Input.touchCount>0 && extraJumps >0) // touchscreen
         {
             rb.velocity = Vector2.up * jumpforce;
             extraJumps--;
 
         }
         else if(Input.GetKeyDown(KeyCode.UpArrow)&& extraJumps == 0 && isGrounded == true)
-        // else if (Input.touchCount>0 && extraJumps == 0 && isGrounded == true)   touchscreen
+        //else if (Input.touchCount>0 && extraJumps == 0 && isGrounded == true)  // touchscreen
         {
             rb.velocity = Vector2.up * jumpforce;
             // ScoreScript.scoreValue += 1;
