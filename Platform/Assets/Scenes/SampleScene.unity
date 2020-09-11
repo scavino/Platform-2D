@@ -211,7 +211,6 @@ GameObject:
   m_Component:
   - component: {fileID: 41505074}
   - component: {fileID: 41505073}
-  - component: {fileID: 41505075}
   - component: {fileID: 41505076}
   m_Layer: 0
   m_Name: KillZone
@@ -260,19 +259,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &41505075
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 41505072}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f3b6818e618458418c6bef7af9f0a91, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnPoint: {fileID: 343883950}
 --- !u!82 &41505076
 AudioSource:
   m_ObjectHideFlags: 0
@@ -6477,5 +6463,10 @@ PrefabInstance:
       propertyPath: jumpforce
       value: 45
       objectReference: {fileID: 0}
+    - target: {fileID: 9211812712741988013, guid: cddb1ab11e7299f43a875f1c232e89dd,
+        type: 3}
+      propertyPath: spawnPoint
+      value: 
+      objectReference: {fileID: 343883950}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cddb1ab11e7299f43a875f1c232e89dd, type: 3}

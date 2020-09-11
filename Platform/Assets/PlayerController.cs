@@ -16,7 +16,9 @@ public class PlayerController : MonoBehaviour
     public float jumpforce;
     public int extraJumps;
     public int extraJumpsValue;
-
+    
+    public Transform spawnPoint;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -58,5 +60,21 @@ public class PlayerController : MonoBehaviour
         
     }
 
- 
+    
+
+
+
+    void OnCollisionEnter2D(Collision2D col)
+    {
+
+        if (col.transform.CompareTag("KillZone"))
+        {
+            // col.transform.position = spawnPoint.position;
+            SceneManager.LoadScene("GameOver");
+
+            //ScoreScript.scoreValue=0;
+        }
+
+    }
+
 }
