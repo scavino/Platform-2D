@@ -67,7 +67,7 @@ public class PlayerController : MonoBehaviour
     void OnCollisionEnter2D(Collision2D col)
     {
 
-        if (col.transform.CompareTag("KillZone"))
+        if (col.transform.CompareTag("KillZone")|| col.transform.CompareTag("enemy"))
         {
             // col.transform.position = spawnPoint.position;
             SceneManager.LoadScene("GameOver");
