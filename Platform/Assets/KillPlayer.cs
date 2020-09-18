@@ -14,9 +14,8 @@ public class KillPlayer : MonoBehaviour
        
         if(col.transform.CompareTag("Player"))
         {   
-            col.transform.position = spawnPoint.position;
-           
-            //SceneManager.LoadScene("GameOver");
+            // col.transform.position = spawnPoint.position;
+            SceneManager.LoadScene("GameOver");
 
             //ScoreScript.scoreValue=0;
         }

@@ -1,9 +1,0 @@
-
-
-PLATFORM 2D 
-
-CLASSICO: 
--SampleScene
--Level_3
--Level_6
--Level_7

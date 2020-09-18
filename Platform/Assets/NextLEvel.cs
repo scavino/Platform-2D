@@ -5,20 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class NextLEvel : MonoBehaviour
 {
-    public int nextSceneLoad;
-    void Start()
-    {
-        nextSceneLoad = SceneManager.GetActiveScene().buildIndex + 1;
-    }
-
-    public void nextLevel()
+    public void PlayGame()
     {
         // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        SceneManager.LoadScene(nextSceneLoad);
-
-        if (nextSceneLoad > PlayerPrefs.GetInt("levelAt"))
-        {
-            PlayerPrefs.SetInt("levelAt", nextSceneLoad);
-        }
+        SceneManager.LoadScene("Level_2");
     }
 }
