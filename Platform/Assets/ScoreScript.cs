@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ScoreScript : MonoBehaviour
 {
 
-    public static float scoreValue = 0;
+    public static float coinAmount = 0;
     Text score;
     // Start is called before the first frame update
     void Start()
@@ -17,7 +18,8 @@ public class ScoreScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        scoreValue += Time.deltaTime;
-        score.text = "score: " + scoreValue;
+
+        score.text = coinAmount + "  COINS";
+        
     }
 }

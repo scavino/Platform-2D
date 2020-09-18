@@ -18,19 +18,27 @@ public class PlayerController : MonoBehaviour
     public int extraJumpsValue;
     
     public Transform spawnPoint;
+
+    public GameObject effect;
+
+    public GameObject gameOverUI;
+  
     
+
     // Start is called before the first frame update
     void Start()
     {
         extraJumps = extraJumpsValue;
         rb=GetComponent<Rigidbody2D>();
+      
+
         
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-       
+        
         transform.Translate(Vector2.right * speed * Time.deltaTime);
         
 
@@ -43,15 +51,15 @@ public class PlayerController : MonoBehaviour
         {
             extraJumps = extraJumpsValue;
         }
-        if(Input.GetKeyDown(KeyCode.UpArrow) && extraJumps>0)
+        if (Input.GetKeyDown(KeyCode.UpArrow) && extraJumps > 0)
         //if(Input.touchCount>0 && extraJumps >0) // touchscreen
         {
             rb.velocity = Vector2.up * jumpforce;
             extraJumps--;
 
         }
-        else if(Input.GetKeyDown(KeyCode.UpArrow)&& extraJumps == 0 && isGrounded == true)
-        //else if (Input.touchCount>0 && extraJumps == 0 && isGrounded == true)  // touchscreen
+        else if (Input.GetKeyDown(KeyCode.UpArrow) && extraJumps == 0 && isGrounded == true)
+        /*else if (Input.touchCount>0 && extraJumps == 0 && isGrounded == true) */ // touchscreen
         {
             rb.velocity = Vector2.up * jumpforce;
             // ScoreScript.scoreValue += 1;
@@ -69,12 +77,23 @@ public class PlayerController : MonoBehaviour
 
         if (col.transform.CompareTag("KillZone")|| col.transform.CompareTag("enemy"))
         {
-            // col.transform.position = spawnPoint.position;
-            SceneManager.LoadScene("GameOver");
+            //Instantiate(effect, transform.position, Quaternion.identity);
+            //Destroy(gameObject);
+
+            gameOverUI.SetActive(true);
+            Time.timeScale = 0f;
+
+            //col.transform.position = spawnPoint.position;
+            
+            //rb.transform.position = spawnPoint.position;
+
+            // SceneManager.LoadScene("GameOver");
 
             //ScoreScript.scoreValue=0;
         }
+       
 
     }
+   
 
 }
