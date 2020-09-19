@@ -7,7 +7,10 @@ TagManager:
   - KillZone
   - enemy
   - TheEnd
+<<<<<<< HEAD
   - Switch
+=======
+>>>>>>> parent of 27d9eda... PostVacanza : )
   layers:
   - Default
   - TransparentFX
